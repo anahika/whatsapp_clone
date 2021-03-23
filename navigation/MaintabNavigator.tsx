@@ -18,25 +18,25 @@ export default function BottomTabNavigator() {
   return (
     <MainTab.Navigator
       initialRouteName="Chats"
-      tabBarOptions={{ 
+      tabBarOptions={{
         activeTintColor: Colors[colorScheme].background,
         style: {
-          backgroundColor:Colors[colorScheme].tint,
+          backgroundColor: Colors[colorScheme].tint,
         },
         indicatorStyle: {
           backgroundColor: Colors[colorScheme].background,
-          height:4,
+          height: 4,
         },
         labelStyle: {
           fontWeight: "bold"
         },
         showIcon: true,
-        }}>
+      }}>
       <MainTab.Screen
         name="Camera"
         component={TabOneNavigator}
         options={{
-          tabBarIcon: ({ color: string }) => <Fontisto name="camera" color={Colors[colorScheme].background} size={18}/>,
+          tabBarIcon: ({ color: string }) => <Fontisto name="camera" color={Colors[colorScheme].background} size={18} />,
           tabBarLabel: () => null,
         }}
       />
@@ -72,7 +72,7 @@ function TabOneNavigator() {
       <TabOneStack.Screen
         name="TabOneScreen"
         component={TabOneScreen}
-        options={{  headerTitle: 'Tab One Title'}}
+        options={{ headerTitle: 'Tab One Title' }}
       />
     </TabOneStack.Navigator>
   );
