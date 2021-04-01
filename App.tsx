@@ -16,13 +16,8 @@ export default function App() {
   } else {
     return (
       <SafeAreaProvider>
-<<<<<<< HEAD
          <Navigation colorScheme={colorScheme} /> 
           <StatusBar /> 
-=======
-        <Navigation colorScheme={colorScheme} />
-        <StatusBar />
->>>>>>> ec127af... refactored package.json
       </SafeAreaProvider>
     );
   }
