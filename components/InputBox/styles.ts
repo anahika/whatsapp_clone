@@ -10,17 +10,17 @@ const styles = StyleSheet.create({
      mainContainer: {
          flexDirection: 'row',
          backgroundColor:'white',
-         padding:50,
+         padding:10,
          borderRadius:50,
          marginRight:10,
-         flex:1,
+         flex:1, 
          alignItems:'center',
 
      },
      buttonContainer: {
          backgroundColor:Colors.light.tint,
          borderRadius:50,
-         width:15,
+         width:50,
          height:50,
          justifyContent:'center',
          alignItems:'center',

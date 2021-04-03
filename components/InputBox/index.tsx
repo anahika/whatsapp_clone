@@ -7,18 +7,19 @@ import { useState } from 'react'
 
 const InputBox = () => {
 
-    const [ message, setMessage ] = useState( ' ');
+    const [ message, setMessage ] = useState('');
 
     const onMicrophonePress = () => {
           console.log('microphone');
     }
 
     const onSendPress = () => {
-        console.log('microphone');
+        console.log('send');
         // send a message to the backend
+        setMessage('');
     }
 
-    const onClick = () => {
+    const onPress = () => {
         if(!message) {
             onMicrophonePress();
         }
@@ -42,11 +43,12 @@ const InputBox = () => {
                {!message && <Fontisto name="camera" size={24} color="grey" style={styles.icon}/>}
 
             </View>
-            <TouchableOpacity onPress={onClick}>
+            <TouchableOpacity onPress={onPress}>
                 <View style={styles.buttonContainer}> 
-                    {!message 
-                    ? <MaterialCommunityIcons name="microphone" size={28} color="white" />
-                    : <MaterialIcons name="send" size={28} color ="white" />
+                  {
+                    !message 
+                        ? <MaterialCommunityIcons name="microphone" size={28} color="white" />
+                        : <MaterialIcons name="send" size={28} color ="white" />
                     }
                 </View>
             </TouchableOpacity>

@@ -10,6 +10,7 @@ import { RootStackParamList } from '../types';
 import MaintabNavigator from './MaintabNavigator';
 import LinkingConfiguration from './LinkingConfiguration';
 import Colors from "../constants/Colors"
+import ContactScreen from '../screens/ContactScreen';
 
 
 // If you are not familiar with React Navigation, we recommend going through the
@@ -80,8 +81,14 @@ function RootNavigator() {
         })}
             
       />
-
-      <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
+      <Stack.Screen 
+         name="Contacts" 
+         component={ContactScreen}
+         options={( {route} ) => ({ 
+          title: 'Select Contact'
+        })}
+       />
+      {/* <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} /> */}
     </Stack.Navigator>
   );
 }

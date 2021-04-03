@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, ImageBackground  } from 'react-native'
+import { ImageBackground  } from 'react-native'
 import { useRoute } from '@react-navigation/native'
 import { FlatList} from 'react-native-gesture-handler';
 import ChatRoomData from '../data/Chats'

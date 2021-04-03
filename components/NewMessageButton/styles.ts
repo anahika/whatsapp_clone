@@ -9,7 +9,9 @@ const styles = StyleSheet.create({
            borderRadius:25,
            justifyContent: 'center',
            alignItems: 'center',
-           
+           position:'absolute',
+           bottom:20,
+           right:20
         },
 
 })
